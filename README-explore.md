@@ -6,6 +6,7 @@ Files changed
 APIs used
 - Base endpoint: https://us-central1-nft-cloud-functions.cloudfunctions.net/explore
 - Filtered endpoint example: https://us-central1-nft-cloud-functions.cloudfunctions.net/explore?filter=likes_high_to_low
+- Author endpoint example: https://us-central1-nft-cloud-functions.cloudfunctions.net/authors?author=73855012
 
 Goal
 - Replace static markup with a data-driven UI that fetches items from the API, supports client-side filter selection (via query param), and shows a live countdown per item when an expiry is present.
