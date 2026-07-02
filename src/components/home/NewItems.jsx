@@ -66,7 +66,7 @@ const NewItems = () => {
                 <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={it.id}>
                   <div className="nft__item">
                     <div className="author_list_pp">
-                      <Link to="/author" title={`Creator: ${it.authorId}`}>
+                      <Link to={`/author/${it.authorId}`} title={`Creator: ${it.authorId}`}>
                         <img className="lazy" src={it.authorImage} alt="author" />
                         <i className="fa fa-check"></i>
                       </Link>
@@ -79,25 +79,33 @@ const NewItems = () => {
                           <button type="button">Buy Now</button>
                           <div className="nft__item_share">
                             <h4>Share</h4>
-                            <a href="#" target="_blank" rel="noreferrer">
+                            <a
+                              href="https://www.facebook.com/sharer/sharer.php"
+                              target="_blank"
+                              rel="noreferrer"
+                            >
                               <i className="fa fa-facebook fa-lg"></i>
                             </a>
-                            <a href="#" target="_blank" rel="noreferrer">
+                            <a
+                              href="https://twitter.com/intent/tweet"
+                              target="_blank"
+                              rel="noreferrer"
+                            >
                               <i className="fa fa-twitter fa-lg"></i>
                             </a>
-                            <a href="#">
+                            <a href="mailto:?subject=Check%20this%20out">
                               <i className="fa fa-envelope fa-lg"></i>
                             </a>
                           </div>
                         </div>
                       </div>
 
-                      <Link to="/item-details">
+                      <Link to={`/item-details/${it.nftId}`}>
                         <img src={it.nftImage} className="lazy nft__item_preview" alt={it.title} />
                       </Link>
                     </div>
                     <div className="nft__item_info">
-                      <Link to="/item-details">
+                      <Link to={`/item-details/${it.nftId}`}>
                         <h4>{it.title}</h4>
                       </Link>
                       <div className="nft__item_price">{it.price} ETH</div>
